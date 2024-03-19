@@ -1,0 +1,106 @@
+[gd_scene load_steps=4 format=3 uid="uid://du15pc8r8iswm"]
+
+[ext_resource type="Script" path="res://src/scripts/chapter_menu.gd" id="1_5ihc6"]
+[ext_resource type="Texture2D" uid="uid://c4io7vrgdmces" path="res://assets/art/shared/menus/chapter_menu.png" id="2_li4je"]
+[ext_resource type="FontFile" uid="uid://bfnot86sditsf" path="res://assets/theme/fonts/dpcomic.ttf" id="3_a60n2"]
+
+[node name="ChapterMenu" type="Node2D"]
+scale = Vector2(4, 4)
+script = ExtResource("1_5ihc6")
+
+[node name="Ui" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 288.0
+offset_bottom = 162.0
+
+[node name="TextureRect" type="TextureRect" parent="Ui"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = -81.0
+offset_right = 144.0
+offset_bottom = 81.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_li4je")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Ui"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -86.0
+offset_top = 26.5
+offset_right = 86.0
+offset_bottom = 66.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("3_a60n2")
+theme_override_font_sizes/normal_font_size = 30
+text = "Select Chapter"
+
+[node name="Crete" type="Button" parent="Ui"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 24.0
+offset_top = -49.0
+offset_right = 72.0
+offset_bottom = -1.0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_a60n2")
+theme_override_font_sizes/font_size = 13
+text = "Crete"
+
+[node name="Bavaria" type="Button" parent="Ui"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 88.0
+offset_top = -49.0
+offset_right = 136.0
+offset_bottom = -1.0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_a60n2")
+theme_override_font_sizes/font_size = 13
+text = "Bavaria"
+
+[node name="Babylon" type="Button" parent="Ui"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 152.0
+offset_top = -49.0
+offset_right = 200.0
+offset_bottom = -1.0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_a60n2")
+theme_override_font_sizes/font_size = 13
+text = "Babylon"
+
+[node name="LvlCreator" type="Button" parent="Ui"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 216.0
+offset_top = -49.0
+offset_right = 264.0
+offset_bottom = -1.0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_a60n2")
+theme_override_font_sizes/font_size = 13
+text = "Sand
+box"
+
+[connection signal="pressed" from="Ui/Crete" to="." method="_on_crete_pressed"]

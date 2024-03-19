@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8gbbe444b4bl"]
+
+[ext_resource type="Texture2D" uid="uid://dxlg6qa7y78ps" path="res://assets/art/crete/environment/background.png" id="1_w47x6"]
+[ext_resource type="Texture2D" uid="uid://dapnmukp11olr" path="res://assets/art/crete/environment/tablecloth.png" id="2_3wxs4"]
+
+[node name="CreteLvl1" type="Node2D"]
+scale = Vector2(4, 4)
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(144, 81)
+texture = ExtResource("1_w47x6")
+metadata/_edit_lock_ = true
+
+[node name="Tablecloth" type="Sprite2D" parent="."]
+position = Vector2(96, 72)
+texture = ExtResource("2_3wxs4")
+metadata/_edit_lock_ = true
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="TileMap" type="TileMap" parent="CharacterBody2D"]
+format = 2
