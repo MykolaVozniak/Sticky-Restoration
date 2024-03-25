@@ -1,55 +1,206 @@
-[gd_scene load_steps=10 format=3 uid="uid://b8gbbe444b4bl"]
+[gd_scene load_steps=30 format=3 uid="uid://b8gbbe444b4bl"]
 
-[ext_resource type="Texture2D" uid="uid://dxlg6qa7y78ps" path="res://assets/art/crete/environment/background.png" id="1_w47x6"]
+[ext_resource type="Script" path="res://src/scenes/GameManager.gd" id="1_3jj3m"]
+[ext_resource type="Texture2D" uid="uid://ctlxknl4fihy5" path="res://assets/art/crete/environment/background.png" id="1_w47x6"]
 [ext_resource type="Texture2D" uid="uid://dapnmukp11olr" path="res://assets/art/crete/environment/tablecloth.png" id="2_3wxs4"]
 [ext_resource type="Texture2D" uid="uid://byt6lmb6n070h" path="res://assets/art/shared/tile_maps/figure_tiles.png" id="3_snhbl"]
 [ext_resource type="Script" path="res://src/scripts/Figure.gd" id="3_tmhl1"]
 [ext_resource type="Texture2D" uid="uid://bibhwi0887lut" path="res://assets/art/shared/tile_maps/shadow_tiles.png" id="4_o8jh3"]
+[ext_resource type="Texture2D" uid="uid://bbbvkc0ic1g50" path="res://assets/art/crete/environment/table.png" id="5_dfsgg"]
+[ext_resource type="Texture2D" uid="uid://bhad17uaqynyt" path="res://assets/art/shared/tile_maps/example_tiles.png" id="6_ftnkr"]
+[ext_resource type="Texture2D" uid="uid://c5fgikms6shah" path="res://assets/art/crete/environment/pause_button_normal.png" id="6_pv35v"]
+[ext_resource type="Texture2D" uid="uid://cxqmbist5vlyb" path="res://assets/art/shared/tile_maps/glyph_tiles.png" id="7_6fekl"]
+[ext_resource type="Texture2D" uid="uid://dljg2p2pibb8y" path="res://assets/art/crete/environment/pause_button_pressed.png" id="7_h51l5"]
+[ext_resource type="Texture2D" uid="uid://d1oekkmetsrdj" path="res://assets/art/crete/environment/pause_button_hover.png" id="8_81hna"]
+[ext_resource type="FontFile" uid="uid://bfnot86sditsf" path="res://assets/theme/fonts/dpcomic.ttf" id="13_wexiq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7a7nd"]
 texture = ExtResource("3_snhbl")
 texture_region_size = Vector2i(8, 8)
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-4:0/0 = 0
-5:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-4:1/0 = 0
-5:1/0 = 0
 0:2/0 = 0
 1:2/0 = 0
 2:2/0 = 0
-3:2/0 = 0
-4:2/0 = 0
-5:2/0 = 0
-6:2/0 = 0
-7:2/0 = 0
-0:3/0 = 0
-1:3/0 = 0
 2:3/0 = 0
 3:3/0 = 0
 4:3/0 = 0
 5:3/0 = 0
 6:3/0 = 0
 7:3/0 = 0
+8:3/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+14:4/0 = 0
+15:4/0 = 0
+16:4/0 = 0
+17:4/0 = 0
+18:4/0 = 0
+19:4/0 = 0
+19:5/0 = 0
+20:5/0 = 0
+21:5/0 = 0
+22:5/0 = 0
+22:6/0 = 0
+21:6/0 = 0
+20:6/0 = 0
+19:6/0 = 0
+18:6/0 = 0
+17:6/0 = 0
+16:6/0 = 0
+15:6/0 = 0
+14:6/0 = 0
+13:6/0 = 0
+12:6/0 = 0
+11:6/0 = 0
+10:6/0 = 0
+9:6/0 = 0
+8:6/0 = 0
+7:6/0 = 0
+6:6/0 = 0
+5:6/0 = 0
+4:6/0 = 0
+3:6/0 = 0
+2:6/0 = 0
+1:6/0 = 0
+0:6/0 = 0
+0:5/0 = 0
 0:4/0 = 0
+0:3/0 = 0
+1:3/0 = 0
 1:4/0 = 0
-2:4/0 = 0
+1:5/0 = 0
+2:5/0 = 0
 3:4/0 = 0
 4:4/0 = 0
 5:4/0 = 0
 6:4/0 = 0
+2:4/0 = 0
 7:4/0 = 0
-0:5/0 = 0
-1:5/0 = 0
-2:5/0 = 0
-3:5/0 = 0
-4:5/0 = 0
-5:5/0 = 0
 6:5/0 = 0
+5:5/0 = 0
+4:5/0 = 0
+3:5/0 = 0
 7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+14:5/0 = 0
+15:5/0 = 0
+16:5/0 = 0
+17:5/0 = 0
+18:5/0 = 0
+22:4/0 = 0
+23:4/0 = 0
+21:4/0 = 0
+20:4/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+15:2/0 = 0
+16:2/0 = 0
+17:2/0 = 0
+18:2/0 = 0
+19:2/0 = 0
+20:2/0 = 0
+21:2/0 = 0
+22:2/0 = 0
+23:2/0 = 0
+24:2/0 = 0
+25:2/0 = 0
+26:2/0 = 0
+27:2/0 = 0
+28:2/0 = 0
+29:2/0 = 0
+30:2/0 = 0
+31:2/0 = 0
+31:3/0 = 0
+31:4/0 = 0
+31:5/0 = 0
+31:6/0 = 0
+30:6/0 = 0
+29:6/0 = 0
+28:6/0 = 0
+27:6/0 = 0
+26:6/0 = 0
+25:6/0 = 0
+24:6/0 = 0
+23:6/0 = 0
+23:5/0 = 0
+24:5/0 = 0
+25:5/0 = 0
+26:5/0 = 0
+27:5/0 = 0
+28:5/0 = 0
+29:5/0 = 0
+30:5/0 = 0
+30:4/0 = 0
+29:4/0 = 0
+28:4/0 = 0
+27:4/0 = 0
+26:4/0 = 0
+25:4/0 = 0
+24:4/0 = 0
+23:3/0 = 0
+24:3/0 = 0
+25:3/0 = 0
+26:3/0 = 0
+27:3/0 = 0
+28:3/0 = 0
+29:3/0 = 0
+30:3/0 = 0
+22:3/0 = 0
+21:3/0 = 0
+20:3/0 = 0
+19:3/0 = 0
+18:3/0 = 0
+17:3/0 = 0
+16:3/0 = 0
+15:3/0 = 0
+14:3/0 = 0
+13:3/0 = 0
+12:3/0 = 0
+11:3/0 = 0
+10:3/0 = 0
+9:3/0 = 0
+39:2/0 = 0
+40:2/0 = 0
+41:2/0 = 0
+42:2/0 = 0
+42:3/0 = 0
+41:3/0 = 0
+40:3/0 = 0
+39:3/0 = 0
+32:2/0 = 0
+33:2/0 = 0
+33:3/0 = 0
+33:4/0 = 0
+32:4/0 = 0
+32:3/0 = 0
+32:5/0 = 0
+32:6/0 = 0
+33:6/0 = 0
+33:5/0 = 0
+34:5/0 = 0
+34:3/0 = 0
+35:6/0 = 0
+36:6/0 = 0
+37:6/0 = 0
+38:6/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_4spe5"]
 tile_size = Vector2i(8, 8)
@@ -58,15 +209,299 @@ sources/0 = SubResource("TileSetAtlasSource_7a7nd")
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2ul8j"]
 texture = ExtResource("4_o8jh3")
 texture_region_size = Vector2i(8, 8)
+0:2/0 = 0
+1:2/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+15:2/0 = 0
+16:2/0 = 0
+17:2/0 = 0
+18:2/0 = 0
+19:2/0 = 0
+20:2/0 = 0
+21:2/0 = 0
+22:2/0 = 0
+23:2/0 = 0
+24:2/0 = 0
+25:2/0 = 0
+26:2/0 = 0
+27:2/0 = 0
+28:2/0 = 0
+29:2/0 = 0
+30:2/0 = 0
+31:2/0 = 0
+32:2/0 = 0
+33:2/0 = 0
+33:3/0 = 0
+33:4/0 = 0
+33:5/0 = 0
+33:6/0 = 0
+32:6/0 = 0
+31:6/0 = 0
+30:5/0 = 0
+29:5/0 = 0
+28:5/0 = 0
+27:5/0 = 0
+26:5/0 = 0
+25:5/0 = 0
+24:5/0 = 0
+23:5/0 = 0
+22:5/0 = 0
+21:5/0 = 0
+20:5/0 = 0
+19:5/0 = 0
+18:5/0 = 0
+17:5/0 = 0
+16:5/0 = 0
+15:5/0 = 0
+14:5/0 = 0
+13:5/0 = 0
+12:5/0 = 0
+11:5/0 = 0
+10:5/0 = 0
+9:5/0 = 0
+31:5/0 = 0
+28:4/0 = 0
+27:4/0 = 0
+26:4/0 = 0
+25:4/0 = 0
+24:4/0 = 0
+23:4/0 = 0
+22:4/0 = 0
+21:4/0 = 0
+20:4/0 = 0
+19:4/0 = 0
+18:4/0 = 0
+17:4/0 = 0
+16:4/0 = 0
+15:4/0 = 0
+14:4/0 = 0
+13:4/0 = 0
+12:4/0 = 0
+29:4/0 = 0
+30:4/0 = 0
+31:4/0 = 0
+11:4/0 = 0
+10:4/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+14:3/0 = 0
+15:3/0 = 0
+16:3/0 = 0
+17:3/0 = 0
+18:3/0 = 0
+19:3/0 = 0
+20:3/0 = 0
+21:3/0 = 0
+22:3/0 = 0
+23:3/0 = 0
+24:3/0 = 0
+25:3/0 = 0
+26:3/0 = 0
+27:3/0 = 0
+28:3/0 = 0
+29:3/0 = 0
+30:3/0 = 0
+31:3/0 = 0
+32:3/0 = 0
+32:4/0 = 0
+32:5/0 = 0
+30:6/0 = 0
+29:6/0 = 0
+28:6/0 = 0
+27:6/0 = 0
+26:6/0 = 0
+25:6/0 = 0
+24:6/0 = 0
+23:6/0 = 0
+22:6/0 = 0
+21:6/0 = 0
+20:6/0 = 0
+19:6/0 = 0
+18:6/0 = 0
+17:6/0 = 0
+16:6/0 = 0
+15:6/0 = 0
+14:6/0 = 0
+13:6/0 = 0
+12:6/0 = 0
+11:6/0 = 0
+10:6/0 = 0
+9:6/0 = 0
+8:6/0 = 0
+7:6/0 = 0
+6:6/0 = 0
+5:6/0 = 0
+4:6/0 = 0
+3:6/0 = 0
+2:6/0 = 0
+1:6/0 = 0
+0:6/0 = 0
+0:5/0 = 0
+0:4/0 = 0
+0:3/0 = 0
+1:4/0 = 0
+1:5/0 = 0
+1:3/0 = 0
+2:4/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+4:4/0 = 0
+3:4/0 = 0
+8:5/0 = 0
+34:3/0 = 0
+34:5/0 = 0
+35:6/0 = 0
+36:6/0 = 0
+37:6/0 = 0
+38:6/0 = 0
+39:2/0 = 0
+40:2/0 = 0
+41:2/0 = 0
+42:2/0 = 0
+42:3/0 = 0
+41:3/0 = 0
+40:3/0 = 0
+39:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_qapih"]
+tile_size = Vector2i(8, 8)
+sources/0 = SubResource("TileSetAtlasSource_2ul8j")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uxoiu"]
+texture = ExtResource("6_ftnkr")
+texture_region_size = Vector2i(8, 8)
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+15:2/0 = 0
+16:2/0 = 0
+17:2/0 = 0
+18:2/0 = 0
+19:2/0 = 0
+20:2/0 = 0
+21:2/0 = 0
+22:2/0 = 0
+23:2/0 = 0
+24:2/0 = 0
+25:2/0 = 0
+26:2/0 = 0
+27:2/0 = 0
+28:2/0 = 0
+29:2/0 = 0
+30:2/0 = 0
+31:2/0 = 0
+32:2/0 = 0
+33:2/0 = 0
+34:3/0 = 0
+33:3/0 = 0
+32:3/0 = 0
+31:3/0 = 0
+30:3/0 = 0
+29:3/0 = 0
+28:3/0 = 0
+27:3/0 = 0
+26:3/0 = 0
+25:3/0 = 0
+24:3/0 = 0
+23:3/0 = 0
+22:3/0 = 0
+21:3/0 = 0
+20:3/0 = 0
+19:3/0 = 0
+18:3/0 = 0
+17:3/0 = 0
+16:3/0 = 0
+15:3/0 = 0
+14:3/0 = 0
+13:3/0 = 0
+12:3/0 = 0
+11:3/0 = 0
+10:3/0 = 0
+9:3/0 = 0
+8:3/0 = 0
+7:3/0 = 0
+6:3/0 = 0
+5:3/0 = 0
+4:3/0 = 0
+3:3/0 = 0
+2:3/0 = 0
+1:3/0 = 0
+0:3/0 = 0
+39:2/0 = 0
+40:2/0 = 0
+41:2/0 = 0
+42:2/0 = 0
+42:3/0 = 0
+41:3/0 = 0
+40:3/0 = 0
+39:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_0gdxd"]
+tile_size = Vector2i(8, 8)
+sources/0 = SubResource("TileSetAtlasSource_uxoiu")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xjklu"]
+texture = ExtResource("7_6fekl")
+texture_region_size = Vector2i(8, 8)
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
+3:0/0 = 0
 4:0/0 = 0
 5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
 0:1/0 = 0
 1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
 4:1/0 = 0
 5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
 0:2/0 = 0
 1:2/0 = 0
 2:2/0 = 0
@@ -99,23 +534,153 @@ texture_region_size = Vector2i(8, 8)
 5:5/0 = 0
 6:5/0 = 0
 7:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_qapih"]
+[sub_resource type="TileSet" id="TileSet_t8n2t"]
 tile_size = Vector2i(8, 8)
-sources/0 = SubResource("TileSetAtlasSource_2ul8j")
+sources/0 = SubResource("TileSetAtlasSource_xjklu")
+
+[sub_resource type="Animation" id="Animation_57aqk"]
+resource_name = "fade_shade_layer_instant"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ShadeLayer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_t0b8w"]
+resource_name = "appear_shade_layer_instant"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ShadeLayer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_m8xnc"]
+resource_name = "fade_shade_layer"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ShadeLayer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 3, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.87451), Color(1, 1, 1, 0.568627), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_fbbmp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ShadeLayer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fox12"]
+_data = {
+"RESET": SubResource("Animation_fbbmp"),
+"shade_layer_fade_in_instant": SubResource("Animation_t0b8w"),
+"shade_layer_fade_out_4s": SubResource("Animation_m8xnc"),
+"shade_layer_fade_out_instant": SubResource("Animation_57aqk")
+}
+
+[sub_resource type="Animation" id="Animation_c7c1r"]
+resource_name = "text_message_play"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextMessage:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.4, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_wx7b8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextMessage:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tbfg4"]
+_data = {
+"RESET": SubResource("Animation_wx7b8"),
+"text_message_play": SubResource("Animation_c7c1r")
+}
 
 [node name="CreteLvl1" type="Node2D"]
 scale = Vector2(4, 4)
 
-[node name="Background" type="Sprite2D" parent="."]
+[node name="Composition" type="Node2D" parent="."]
+
+[node name="Tablecloth" type="Sprite2D" parent="Composition"]
+z_index = -2
+position = Vector2(96, 72)
+texture = ExtResource("2_3wxs4")
+metadata/_edit_lock_ = true
+
+[node name="Background" type="Sprite2D" parent="Composition"]
 position = Vector2(144, 81)
 texture = ExtResource("1_w47x6")
 metadata/_edit_lock_ = true
 
-[node name="Tablecloth" type="Sprite2D" parent="."]
-z_index = -2
-position = Vector2(96, 72)
-texture = ExtResource("2_3wxs4")
+[node name="Table" type="Sprite2D" parent="Composition"]
+position = Vector2(240, 91)
+texture = ExtResource("5_dfsgg")
 metadata/_edit_lock_ = true
 
 [node name="Figure" type="CharacterBody2D" parent="."]
@@ -124,11 +689,79 @@ script = ExtResource("3_tmhl1")
 [node name="FigureMap" type="TileMap" parent="Figure"]
 tile_set = SubResource("TileSet_4spe5")
 format = 2
-layer_0/tile_data = PackedInt32Array(589834, 0, 0, 655370, 0, 0, 655368, 0, 0, 655373, 0, 0)
+layer_0/tile_data = PackedInt32Array(589834, 0, 2, 655370, 0, 2, 655368, 0, 2, 655373, 0, 2)
 
 [node name="ShadeMap" type="TileMap" parent="Figure"]
 z_index = -1
 position = Vector2(6, 2)
 tile_set = SubResource("TileSet_qapih")
 format = 2
-layer_0/tile_data = PackedInt32Array(655368, 0, 0, 589834, 0, 0, 655370, 0, 0, 655373, 0, 0)
+layer_0/tile_data = PackedInt32Array(655368, 0, 2, 589834, 0, 2, 655370, 0, 2, 655373, 0, 2)
+
+[node name="Example" type="Node2D" parent="."]
+
+[node name="ExampleMap" type="TileMap" parent="Example"]
+tile_set = SubResource("TileSet_0gdxd")
+format = 2
+layer_0/tile_data = PackedInt32Array(458782, 2752512, 2, 524318, 1048576, 2, 327711, 0, 2, 393247, 0, 2, 458783, 2752512, 2, 524319, 0, 2, 327712, 0, 2, 393248, 0, 2, 458784, 2752512, 2, 524320, 0, 2, 458785, 2752512, 2, 524321, 983040, 2, 262174, 1638400, 2, 393246, 327680, 2, 262175, 0, 2, 262176, 0, 2, 262177, 1769472, 2, 393249, 393216, 2)
+
+[node name="GlyphMap" type="TileMap" parent="Example"]
+tile_set = SubResource("TileSet_t8n2t")
+format = 2
+layer_0/tile_data = PackedInt32Array(327706, 131072, 0, 327707, 262144, 0, 393243, 393216, 1, 393244, 262144, 1, 393245, 131072, 0, 458780, 327680, 1, 589850, 196608, 1, 524315, 196608, 3, 524316, 131072, 2, 262171, 393216, 2, 589855, 458752, 2, 589856, 196608, 2, 589857, 131072, 2, 262172, 393216, 0, 589851, 393216, 1, 524317, 458752, 2, 524314, 0, 0, 458778, 0, 2, 589853, 393216, 3, 589854, 393216, 0, 458779, 458752, 1, 327709, 262144, 3, 262170, 65536, 1)
+
+[node name="Spawner" type="Node2D" parent="."]
+
+[node name="Timer" type="Timer" parent="Spawner"]
+wait_time = 20.0
+
+[node name="GameManager" type="Node2D" parent="."]
+unique_name_in_owner = true
+script = ExtResource("1_3jj3m")
+
+[node name="ShadeLayer" type="ColorRect" parent="GameManager"]
+offset_right = 288.0
+offset_bottom = 162.0
+color = Color(0, 0, 0, 0.627451)
+
+[node name="SLAnimationPlayer" type="AnimationPlayer" parent="GameManager/ShadeLayer"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_fox12")
+}
+
+[node name="TextMessage" type="RichTextLabel" parent="GameManager"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = 60.0
+offset_right = 288.0
+offset_bottom = 102.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_fonts/normal_font = ExtResource("13_wexiq")
+theme_override_font_sizes/normal_font_size = 48
+bbcode_enabled = true
+scroll_active = false
+
+[node name="TMAnimationPlayer" type="AnimationPlayer" parent="GameManager/TextMessage"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_tbfg4")
+}
+
+[node name="PauseButton" type="TextureButton" parent="GameManager"]
+offset_left = 265.0
+offset_top = 3.0
+offset_right = 284.0
+offset_bottom = 22.0
+toggle_mode = true
+texture_normal = ExtResource("6_pv35v")
+texture_pressed = ExtResource("7_h51l5")
+texture_hover = ExtResource("8_81hna")
+
+[connection signal="pressed" from="GameManager/PauseButton" to="GameManager" method="_on_pause_button_pressed"]

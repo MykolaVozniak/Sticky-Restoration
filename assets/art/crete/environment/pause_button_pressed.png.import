@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctlxknl4fihy5"
-path="res://.godot/imported/background.png-11b6f2a32a2f56d608382877e2387737.ctex"
+uid="uid://dljg2p2pibb8y"
+path="res://.godot/imported/pause_button_pressed.png-70e17b4ec0bb36646722554fb3b4078b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/crete/environment/background.png"
-dest_files=["res://.godot/imported/background.png-11b6f2a32a2f56d608382877e2387737.ctex"]
+source_file="res://assets/art/crete/environment/pause_button_pressed.png"
+dest_files=["res://.godot/imported/pause_button_pressed.png-70e17b4ec0bb36646722554fb3b4078b.ctex"]
 
 [params]
 
