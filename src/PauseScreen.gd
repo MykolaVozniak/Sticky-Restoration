@@ -3,6 +3,7 @@ extends Control
 @onready var lvl_label = $LvlLabel
 @onready var game_manager = %GameManager
 
+const JOURNAL = preload("res://src/scenes/journal.tscn")
 var current_lvl
 var next_lvl
 var lvl_menu
@@ -28,7 +29,8 @@ func _on_retry_button_pressed():
 	get_tree().change_scene_to_packed(current_lvl)
 
 func _on_journal_button_pressed():
-	pass # Replace with function body.
+	var node = JOURNAL.instantiate()
+	add_child(node)
 
 func _on_next_button_pressed():
 	get_tree().change_scene_to_packed(next_lvl)

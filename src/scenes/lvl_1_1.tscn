@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://b8gbbe444b4bl"]
+[gd_scene load_steps=37 format=3 uid="uid://b8gbbe444b4bl"]
 
 [ext_resource type="Texture2D" uid="uid://dapnmukp11olr" path="res://assets/art/crete/environment/tablecloth.png" id="1_bqos1"]
 [ext_resource type="Texture2D" uid="uid://ctlxknl4fihy5" path="res://assets/art/crete/environment/background.png" id="2_tig0u"]
@@ -15,20 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://rsewr1p8ffwd" path="res://assets/art/crete/environment/buttons/pause_button_blue_normal.png" id="13_niqvi"]
 [ext_resource type="Texture2D" uid="uid://dbkrolvyv4qow" path="res://assets/art/crete/environment/buttons/pause_button_blue_pressed.png" id="14_r0jcu"]
 [ext_resource type="Texture2D" uid="uid://bm0njh71ettj2" path="res://assets/art/crete/environment/buttons/pause_button_blue_hover.png" id="15_3mdxd"]
-[ext_resource type="Script" path="res://src/PauseScreen.gd" id="16_tbsc8"]
-[ext_resource type="Texture2D" uid="uid://d0xixvit1fshw" path="res://assets/art/crete/environment/pause_screen.png" id="17_ikp6x"]
-[ext_resource type="Texture2D" uid="uid://dtcakn1pia41y" path="res://assets/art/crete/environment/buttons/journal_button_normal.png" id="18_g23rw"]
-[ext_resource type="Texture2D" uid="uid://bv4d6rp5ljycp" path="res://assets/art/crete/environment/buttons/journal_button_pressed.png" id="19_hl1mk"]
-[ext_resource type="Texture2D" uid="uid://ba3nxccxa00l2" path="res://assets/art/crete/environment/buttons/journal_button_hover.png" id="20_5rf52"]
-[ext_resource type="Texture2D" uid="uid://dbuynrmjbigig" path="res://assets/art/crete/environment/buttons/to_menu_button_normal.png" id="21_6f5sd"]
-[ext_resource type="Texture2D" uid="uid://c57vuhi3bses8" path="res://assets/art/crete/environment/buttons/to_menu_button_pressed.png" id="22_f2fn3"]
-[ext_resource type="Texture2D" uid="uid://cbqthuhe1cm4" path="res://assets/art/crete/environment/buttons/to_menu_button_hover.png" id="23_rkfb4"]
-[ext_resource type="Texture2D" uid="uid://dmc4y4a3mh2ut" path="res://assets/art/crete/environment/buttons/retry_button_normal.png" id="24_lly04"]
-[ext_resource type="Texture2D" uid="uid://bnh8jnku2oci5" path="res://assets/art/crete/environment/buttons/retry_button_pressed.png" id="25_i4427"]
-[ext_resource type="Texture2D" uid="uid://dkdxgd3xyiid" path="res://assets/art/crete/environment/buttons/retry_button_hover.png" id="26_tbcuj"]
-[ext_resource type="Texture2D" uid="uid://d3hffq41q14ir" path="res://assets/art/crete/environment/buttons/next_button_normal.png" id="27_urcv8"]
-[ext_resource type="Texture2D" uid="uid://bxftxnfnbm1xe" path="res://assets/art/crete/environment/buttons/next_button_pressed.png" id="28_2738k"]
-[ext_resource type="Texture2D" uid="uid://bb08cspacyn38" path="res://assets/art/crete/environment/buttons/next_button_hover.png" id="29_3y53f"]
+[ext_resource type="PackedScene" uid="uid://clesfyfwp2gx" path="res://src/scenes/pause_screen.tscn" id="16_bcidk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7a7nd"]
 texture = ExtResource("4_b6mr4")
@@ -911,99 +898,7 @@ libraries = {
 "": SubResource("AnimationLibrary_0syif")
 }
 
-[node name="PauseScreen" type="Control" parent="GameManager"]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 288.0
-offset_bottom = 162.0
-script = ExtResource("16_tbsc8")
-
-[node name="TextureRect" type="TextureRect" parent="GameManager/PauseScreen"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -81.5
-offset_top = -78.0
-offset_right = 81.5
-offset_bottom = 74.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("17_ikp6x")
-metadata/_edit_lock_ = true
-
-[node name="JournalButton" type="TextureButton" parent="GameManager/PauseScreen"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -39.5
-offset_top = -74.0
-offset_right = 39.5
-offset_bottom = 17.0
-grow_horizontal = 2
-grow_vertical = 2
-texture_normal = ExtResource("18_g23rw")
-texture_pressed = ExtResource("19_hl1mk")
-texture_hover = ExtResource("20_5rf52")
-
-[node name="ToMenuButton" type="TextureButton" parent="GameManager/PauseScreen"]
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 95.0
-offset_top = -41.0
-offset_right = 122.0
-offset_bottom = -14.0
-grow_vertical = 0
-texture_normal = ExtResource("21_6f5sd")
-texture_pressed = ExtResource("22_f2fn3")
-texture_hover = ExtResource("23_rkfb4")
-
-[node name="RetryButton" type="TextureButton" parent="GameManager/PauseScreen"]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -13.0
-offset_top = -41.0
-offset_right = 14.0
-offset_bottom = -14.0
-grow_horizontal = 2
-grow_vertical = 0
-texture_normal = ExtResource("24_lly04")
-texture_pressed = ExtResource("25_i4427")
-texture_hover = ExtResource("26_tbcuj")
-
-[node name="NextButton" type="TextureButton" parent="GameManager/PauseScreen"]
-layout_mode = 0
-offset_left = 167.0
-offset_top = 121.0
-offset_right = 194.0
-offset_bottom = 148.0
-texture_normal = ExtResource("27_urcv8")
-texture_pressed = ExtResource("28_2738k")
-texture_hover = ExtResource("29_3y53f")
-
-[node name="LvlLabel" type="RichTextLabel" parent="GameManager/PauseScreen"]
-layout_mode = 0
-offset_left = 63.0
-offset_top = 102.0
-offset_right = 226.0
-offset_bottom = 121.0
-theme_override_fonts/normal_font = ExtResource("9_7g6a3")
-bbcode_enabled = true
-text = "[center][shake rate=10 level=10 connected=1]LVL 1-1[/shake][/center]"
+[node name="PauseScreen" parent="GameManager" instance=ExtResource("16_bcidk")]
+visible = false
 
 [connection signal="pressed" from="GameManager/PauseButton" to="GameManager" method="_on_pause_button_pressed"]
-[connection signal="pressed" from="GameManager/PauseScreen/JournalButton" to="GameManager/PauseScreen" method="_on_journal_button_pressed"]
-[connection signal="pressed" from="GameManager/PauseScreen/ToMenuButton" to="GameManager/PauseScreen" method="_on_to_menu_button_pressed"]
-[connection signal="pressed" from="GameManager/PauseScreen/RetryButton" to="GameManager/PauseScreen" method="_on_retry_button_pressed"]
-[connection signal="pressed" from="GameManager/PauseScreen/NextButton" to="GameManager/PauseScreen" method="_on_next_button_pressed"]

@@ -5,6 +5,8 @@ extends Node2D
 @onready var tm_animation_player = $TextMessage/TMAnimationPlayer
 @onready var pb_animation_player = $PauseButton/PBAnimationPlayer
 
+@onready var pause_screen = $PauseScreen
+
 @export_category("Navigation Paths")
 @export var lvl_menu: String
 @export var current_lvl: String
@@ -66,6 +68,8 @@ func handle_start_state():
 func handle_paused_state():
 	set_stop_game_state(GameState.PAUSED)
 	stop_game()
+	await get_tree().create_timer(0.03).timeout
+	pause_screen.visible = true
 
 func handle_win_state():
 	# Логіка перемоги (показ меню статистики, перехід до меню тощо)
@@ -97,6 +101,8 @@ func resume_game(): #call from menu!
 	sl_animation_player.play("shade_layer_fade_out_instant")
 	pb_animation_player.play("pause_button_to_environment")
 	print("game running")
+	pause_screen.visible = false
+	#other menus also
 	
 func _input(_event):
 	if Input.is_action_just_pressed("escape") && current_state == GameState.RUNNING:

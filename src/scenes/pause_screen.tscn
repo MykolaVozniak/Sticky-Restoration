@@ -1,0 +1,113 @@
+[gd_scene load_steps=16 format=3 uid="uid://clesfyfwp2gx"]
+
+[ext_resource type="Script" path="res://src/PauseScreen.gd" id="1_te8gs"]
+[ext_resource type="Texture2D" uid="uid://d0xixvit1fshw" path="res://assets/art/crete/environment/pause_screen.png" id="2_agkyx"]
+[ext_resource type="Texture2D" uid="uid://dtcakn1pia41y" path="res://assets/art/crete/environment/buttons/journal_button_normal.png" id="3_dtpal"]
+[ext_resource type="Texture2D" uid="uid://bv4d6rp5ljycp" path="res://assets/art/crete/environment/buttons/journal_button_pressed.png" id="4_meuwd"]
+[ext_resource type="Texture2D" uid="uid://ba3nxccxa00l2" path="res://assets/art/crete/environment/buttons/journal_button_hover.png" id="5_q8mu0"]
+[ext_resource type="Texture2D" uid="uid://dbuynrmjbigig" path="res://assets/art/crete/environment/buttons/to_menu_button_normal.png" id="6_sbl7l"]
+[ext_resource type="Texture2D" uid="uid://c57vuhi3bses8" path="res://assets/art/crete/environment/buttons/to_menu_button_pressed.png" id="7_3xfya"]
+[ext_resource type="Texture2D" uid="uid://cbqthuhe1cm4" path="res://assets/art/crete/environment/buttons/to_menu_button_hover.png" id="8_buws7"]
+[ext_resource type="Texture2D" uid="uid://dmc4y4a3mh2ut" path="res://assets/art/crete/environment/buttons/retry_button_normal.png" id="9_5fxb8"]
+[ext_resource type="Texture2D" uid="uid://bnh8jnku2oci5" path="res://assets/art/crete/environment/buttons/retry_button_pressed.png" id="10_saigg"]
+[ext_resource type="Texture2D" uid="uid://dkdxgd3xyiid" path="res://assets/art/crete/environment/buttons/retry_button_hover.png" id="11_ctsll"]
+[ext_resource type="Texture2D" uid="uid://d3hffq41q14ir" path="res://assets/art/crete/environment/buttons/next_button_normal.png" id="12_ssgfh"]
+[ext_resource type="Texture2D" uid="uid://bxftxnfnbm1xe" path="res://assets/art/crete/environment/buttons/next_button_pressed.png" id="13_w0o8a"]
+[ext_resource type="Texture2D" uid="uid://bb08cspacyn38" path="res://assets/art/crete/environment/buttons/next_button_hover.png" id="14_u8j3y"]
+[ext_resource type="FontFile" uid="uid://bfnot86sditsf" path="res://assets/theme/fonts/dpcomic.ttf" id="15_6xdr1"]
+
+[node name="PauseScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 288.0
+offset_bottom = 162.0
+script = ExtResource("1_te8gs")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -81.5
+offset_top = -78.0
+offset_right = 81.5
+offset_bottom = 74.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_agkyx")
+metadata/_edit_lock_ = true
+
+[node name="JournalButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -39.5
+offset_top = -74.0
+offset_right = 39.5
+offset_bottom = 17.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("3_dtpal")
+texture_pressed = ExtResource("4_meuwd")
+texture_hover = ExtResource("5_q8mu0")
+
+[node name="ToMenuButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 95.0
+offset_top = -41.0
+offset_right = 122.0
+offset_bottom = -14.0
+grow_vertical = 0
+texture_normal = ExtResource("6_sbl7l")
+texture_pressed = ExtResource("7_3xfya")
+texture_hover = ExtResource("8_buws7")
+
+[node name="RetryButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -13.0
+offset_top = -41.0
+offset_right = 14.0
+offset_bottom = -14.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("9_5fxb8")
+texture_pressed = ExtResource("10_saigg")
+texture_hover = ExtResource("11_ctsll")
+
+[node name="NextButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 167.0
+offset_top = 121.0
+offset_right = 194.0
+offset_bottom = 148.0
+texture_normal = ExtResource("12_ssgfh")
+texture_pressed = ExtResource("13_w0o8a")
+texture_hover = ExtResource("14_u8j3y")
+
+[node name="LvlLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 102.0
+offset_right = 226.0
+offset_bottom = 121.0
+theme_override_fonts/normal_font = ExtResource("15_6xdr1")
+bbcode_enabled = true
+text = "[center][shake rate=10 level=10 connected=1]LVL 1-1[/shake][/center]"
+
+[connection signal="pressed" from="JournalButton" to="." method="_on_journal_button_pressed"]
+[connection signal="pressed" from="ToMenuButton" to="." method="_on_to_menu_button_pressed"]
+[connection signal="pressed" from="RetryButton" to="." method="_on_retry_button_pressed"]
+[connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]
