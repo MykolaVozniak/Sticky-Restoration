@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5fgikms6shah"
-path="res://.godot/imported/pause_button_normal.png-e1f04d314abd28b2a09c821063f91c27.ctex"
+uid="uid://d0xixvit1fshw"
+path="res://.godot/imported/pause_screen.png-88ef275932506d1045ae529741f87140.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/crete/environment/pause_button_normal.png"
-dest_files=["res://.godot/imported/pause_button_normal.png-e1f04d314abd28b2a09c821063f91c27.ctex"]
+source_file="res://assets/art/crete/environment/pause_screen.png"
+dest_files=["res://.godot/imported/pause_screen.png-88ef275932506d1045ae529741f87140.ctex"]
 
 [params]
 

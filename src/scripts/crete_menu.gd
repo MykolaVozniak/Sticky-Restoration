@@ -1,6 +1,6 @@
 extends Node2D
 
-const CRETE_LVL_1 = preload("res://src/scenes/crete_lvl1.tscn")
+#const LVL_1_1 = preload("res://src/scenes/lvl_1_1.tscn")
 
 func _ready():
 	pass
@@ -8,5 +8,5 @@ func _ready():
 func _process(delta):
 	pass
 
-func _on_lvl_1_pressed():
-	get_tree().change_scene_to_packed(CRETE_LVL_1)
+#func _on_lvl_1_pressed():
+	#get_tree().change_scene_to_packed(LVL_1_1)
