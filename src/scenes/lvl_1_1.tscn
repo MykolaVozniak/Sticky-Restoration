@@ -855,6 +855,9 @@ wait_time = 20.0
 [node name="GameManager" type="Node2D" parent="."]
 unique_name_in_owner = true
 script = ExtResource("8_8glfb")
+lvl_menu = "res://src/scenes/crete_menu.tscn"
+current_lvl = "res://src/scenes/lvl_1_1.tscn"
+next_lvl = "res://src/scenes/main_menu.tscn"
 
 [node name="ShadeLayer" type="ColorRect" parent="GameManager"]
 offset_right = 288.0

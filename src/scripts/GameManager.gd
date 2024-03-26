@@ -5,10 +5,10 @@ extends Node2D
 @onready var tm_animation_player = $TextMessage/TMAnimationPlayer
 @onready var pb_animation_player = $PauseButton/PBAnimationPlayer
 
-@export_category("Navigation")
-@export var lvl_menu: PackedScene = null
-@export var current_lvl: PackedScene = null
-@export var next_lvl: PackedScene = null
+@export_category("Navigation Paths")
+@export var lvl_menu: String
+@export var current_lvl: String
+@export var next_lvl: String
 
 const TILE_SIZE: int = 8
 
