@@ -1,0 +1,191 @@
+[gd_scene load_steps=14 format=3 uid="uid://b7rhndggondnc"]
+
+[ext_resource type="Script" path="res://src/scenes/screens/loose_screen.gd" id="1_oduew"]
+[ext_resource type="Texture2D" uid="uid://d0xixvit1fshw" path="res://assets/art/crete/environment/pause_screen.png" id="2_0be4d"]
+[ext_resource type="Texture2D" uid="uid://b8so8e3b5gkof" path="res://assets/art/crete/environment/A_de_a_nema.png" id="2_7qthi"]
+[ext_resource type="FontFile" uid="uid://bfnot86sditsf" path="res://assets/theme/fonts/dpcomic.ttf" id="3_cfqks"]
+[ext_resource type="Texture2D" uid="uid://d3hffq41q14ir" path="res://assets/art/crete/environment/buttons/next_button_normal.png" id="4_4eewv"]
+[ext_resource type="Texture2D" uid="uid://bxftxnfnbm1xe" path="res://assets/art/crete/environment/buttons/next_button_pressed.png" id="5_vy1yw"]
+[ext_resource type="Texture2D" uid="uid://bb08cspacyn38" path="res://assets/art/crete/environment/buttons/next_button_hover.png" id="6_bwes6"]
+[ext_resource type="Texture2D" uid="uid://dmc4y4a3mh2ut" path="res://assets/art/crete/environment/buttons/retry_button_normal.png" id="7_w7e77"]
+[ext_resource type="Texture2D" uid="uid://bnh8jnku2oci5" path="res://assets/art/crete/environment/buttons/retry_button_pressed.png" id="8_memyn"]
+[ext_resource type="Texture2D" uid="uid://dkdxgd3xyiid" path="res://assets/art/crete/environment/buttons/retry_button_hover.png" id="9_jlibb"]
+[ext_resource type="Texture2D" uid="uid://dbuynrmjbigig" path="res://assets/art/crete/environment/buttons/to_menu_button_normal.png" id="10_5twaa"]
+[ext_resource type="Texture2D" uid="uid://c57vuhi3bses8" path="res://assets/art/crete/environment/buttons/to_menu_button_pressed.png" id="11_6ths2"]
+[ext_resource type="Texture2D" uid="uid://cbqthuhe1cm4" path="res://assets/art/crete/environment/buttons/to_menu_button_hover.png" id="12_exw5u"]
+
+[node name="LooseScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 288.0
+offset_bottom = 162.0
+script = ExtResource("1_oduew")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -81.5
+offset_top = -78.0
+offset_right = 81.5
+offset_bottom = 74.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_0be4d")
+metadata/_edit_lock_ = true
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -39.5
+offset_top = -72.5
+offset_right = 39.5
+offset_bottom = 18.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_7qthi")
+metadata/_edit_lock_ = true
+
+[node name="LvlLabel" type="RichTextLabel" parent="TextureRect"]
+layout_mode = 0
+offset_left = 0.5
+offset_top = 97.0
+offset_right = 163.5
+offset_bottom = 137.0
+theme_override_fonts/normal_font = ExtResource("3_cfqks")
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "[center][shake rate=28 level=5 connected=1]Level Failed![/shake][/center]"
+metadata/_edit_lock_ = true
+
+[node name="NextLevelButtonSet" type="Control" parent="TextureRect"]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -80.5
+offset_top = -40.0
+offset_right = 81.5
+grow_horizontal = 2
+grow_vertical = 0
+metadata/_edit_lock_ = true
+
+[node name="NextButton" type="TextureButton" parent="TextureRect/NextLevelButtonSet"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 21.0
+offset_top = -34.0
+offset_right = 48.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("4_4eewv")
+texture_pressed = ExtResource("5_vy1yw")
+texture_hover = ExtResource("6_bwes6")
+metadata/_edit_lock_ = true
+
+[node name="RetryButton" type="TextureButton" parent="TextureRect/NextLevelButtonSet"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -14.0
+offset_top = -34.0
+offset_right = 13.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("7_w7e77")
+texture_pressed = ExtResource("8_memyn")
+texture_hover = ExtResource("9_jlibb")
+metadata/_edit_lock_ = true
+
+[node name="ToMenuButton" type="TextureButton" parent="TextureRect/NextLevelButtonSet"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -49.0
+offset_top = -34.0
+offset_right = -22.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("10_5twaa")
+texture_pressed = ExtResource("11_6ths2")
+texture_hover = ExtResource("12_exw5u")
+metadata/_edit_lock_ = true
+
+[node name="NoNextLevelButtonSet" type="Control" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -80.5
+offset_top = -40.0
+offset_right = 81.5
+grow_horizontal = 2
+grow_vertical = 0
+metadata/_edit_lock_ = true
+
+[node name="RetryButton" type="TextureButton" parent="TextureRect/NoNextLevelButtonSet"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 5.5
+offset_top = -34.0
+offset_right = 32.5
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("7_w7e77")
+texture_pressed = ExtResource("8_memyn")
+texture_hover = ExtResource("9_jlibb")
+metadata/_edit_lock_ = true
+
+[node name="ToMenuButton" type="TextureButton" parent="TextureRect/NoNextLevelButtonSet"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -34.5
+offset_top = -34.0
+offset_right = -7.5
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("10_5twaa")
+texture_pressed = ExtResource("11_6ths2")
+texture_hover = ExtResource("12_exw5u")
+metadata/_edit_lock_ = true
+
+[connection signal="pressed" from="TextureRect/NextLevelButtonSet/NextButton" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="TextureRect/NextLevelButtonSet/RetryButton" to="." method="_on_retry_button_pressed"]
+[connection signal="pressed" from="TextureRect/NextLevelButtonSet/ToMenuButton" to="." method="_on_to_menu_button_pressed"]
+[connection signal="pressed" from="TextureRect/NoNextLevelButtonSet/RetryButton" to="." method="_on_retry_button_pressed"]
+[connection signal="pressed" from="TextureRect/NoNextLevelButtonSet/ToMenuButton" to="." method="_on_to_menu_button_pressed"]

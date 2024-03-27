@@ -1,0 +1,128 @@
+[gd_scene load_steps=16 format=3 uid="uid://clesfyfwp2gx"]
+
+[ext_resource type="Script" path="res://src/scripts/PauseScreen.gd" id="1_866yf"]
+[ext_resource type="Texture2D" uid="uid://d0xixvit1fshw" path="res://assets/art/crete/environment/pause_screen.png" id="2_ax5ic"]
+[ext_resource type="FontFile" uid="uid://bfnot86sditsf" path="res://assets/theme/fonts/dpcomic.ttf" id="3_rc0ky"]
+[ext_resource type="Texture2D" uid="uid://cdw4tt0nl5alv" path="res://assets/art/crete/environment/buttons/settings_button_normal.png" id="4_iscf8"]
+[ext_resource type="Texture2D" uid="uid://bgw6lek41wdl0" path="res://assets/art/crete/environment/buttons/settings_button_pressed.png" id="5_7748t"]
+[ext_resource type="Texture2D" uid="uid://mxydn15vnj1n" path="res://assets/art/crete/environment/buttons/settings_button_hover.png" id="6_dtdl8"]
+[ext_resource type="Texture2D" uid="uid://dmc4y4a3mh2ut" path="res://assets/art/crete/environment/buttons/retry_button_normal.png" id="7_dby31"]
+[ext_resource type="Texture2D" uid="uid://bnh8jnku2oci5" path="res://assets/art/crete/environment/buttons/retry_button_pressed.png" id="8_j4brf"]
+[ext_resource type="Texture2D" uid="uid://dkdxgd3xyiid" path="res://assets/art/crete/environment/buttons/retry_button_hover.png" id="9_w6eap"]
+[ext_resource type="Texture2D" uid="uid://dbuynrmjbigig" path="res://assets/art/crete/environment/buttons/to_menu_button_normal.png" id="10_h84fq"]
+[ext_resource type="Texture2D" uid="uid://c57vuhi3bses8" path="res://assets/art/crete/environment/buttons/to_menu_button_pressed.png" id="11_6smgw"]
+[ext_resource type="Texture2D" uid="uid://cbqthuhe1cm4" path="res://assets/art/crete/environment/buttons/to_menu_button_hover.png" id="12_42lc5"]
+[ext_resource type="Texture2D" uid="uid://dtcakn1pia41y" path="res://assets/art/crete/environment/buttons/journal_button_normal.png" id="13_ls86b"]
+[ext_resource type="Texture2D" uid="uid://bv4d6rp5ljycp" path="res://assets/art/crete/environment/buttons/journal_button_pressed.png" id="14_rgebf"]
+[ext_resource type="Texture2D" uid="uid://ba3nxccxa00l2" path="res://assets/art/crete/environment/buttons/journal_button_hover.png" id="15_jtua7"]
+
+[node name="PauseScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 288.0
+offset_bottom = 162.0
+script = ExtResource("1_866yf")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -81.5
+offset_top = -78.0
+offset_right = 81.5
+offset_bottom = 74.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ax5ic")
+metadata/_edit_lock_ = true
+
+[node name="LvlLabel" type="RichTextLabel" parent="TextureRect"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 99.0
+offset_right = 164.0
+offset_bottom = 117.0
+theme_override_fonts/normal_font = ExtResource("3_rc0ky")
+bbcode_enabled = true
+text = "[center][shake rate=10 level=10 connected=1]LVL 1-1[/shake][/center]"
+metadata/_edit_lock_ = true
+
+[node name="SettingsButton" type="TextureButton" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 21.5
+offset_top = -34.0
+offset_right = 48.5
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("4_iscf8")
+texture_pressed = ExtResource("5_7748t")
+texture_hover = ExtResource("6_dtdl8")
+metadata/_edit_lock_ = true
+
+[node name="RetryButton" type="TextureButton" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -13.5
+offset_top = -34.0
+offset_right = 13.5
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("7_dby31")
+texture_pressed = ExtResource("8_j4brf")
+texture_hover = ExtResource("9_w6eap")
+metadata/_edit_lock_ = true
+
+[node name="ToMenuButton" type="TextureButton" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -48.5
+offset_top = -34.0
+offset_right = -21.5
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("10_h84fq")
+texture_pressed = ExtResource("11_6smgw")
+texture_hover = ExtResource("12_42lc5")
+metadata/_edit_lock_ = true
+
+[node name="JournalButton" type="TextureButton" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -39.5
+offset_top = -72.0
+offset_right = 39.5
+offset_bottom = 19.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("13_ls86b")
+texture_pressed = ExtResource("14_rgebf")
+texture_hover = ExtResource("15_jtua7")
+metadata/_edit_lock_ = true
+
+[connection signal="pressed" from="TextureRect/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="TextureRect/RetryButton" to="." method="_on_retry_button_pressed"]
+[connection signal="pressed" from="TextureRect/ToMenuButton" to="." method="_on_to_menu_button_pressed"]
+[connection signal="pressed" from="TextureRect/JournalButton" to="." method="_on_journal_button_pressed"]

@@ -5,7 +5,8 @@ extends Node2D
 @onready var tm_animation_player = $TextMessage/TMAnimationPlayer
 @onready var pb_animation_player = $PauseButton/PBAnimationPlayer
 
-@onready var pause_screen = $PauseScreen
+const PAUSE_SCREEN = preload("res://src/scenes/screens/pause_screen.tscn")
+var pause_screen
 
 @export_category("Navigation Paths")
 @export var lvl_menu: String
@@ -69,7 +70,9 @@ func handle_paused_state():
 	set_stop_game_state(GameState.PAUSED)
 	stop_game()
 	await get_tree().create_timer(0.03).timeout
-	pause_screen.visible = true
+	
+	pause_screen = PAUSE_SCREEN.instantiate()
+	add_child(pause_screen)
 
 func handle_win_state():
 	# Логіка перемоги (показ меню статистики, перехід до меню тощо)
@@ -101,15 +104,14 @@ func resume_game(): #call from menu!
 	sl_animation_player.play("shade_layer_fade_out_instant")
 	pb_animation_player.play("pause_button_to_environment")
 	print("game running")
-	pause_screen.visible = false
-	#other menus also
+	
+	pause_screen.queue_free()
 	
 func _input(_event):
 	if Input.is_action_just_pressed("escape") && current_state == GameState.RUNNING:
 		set_state(GameState.PAUSED)
 	elif Input.is_action_just_pressed("escape") && stop_game_state == GameState.PAUSED:
 		resume_game()
-
 
 func _on_pause_button_pressed():
 	if current_state == GameState.RUNNING:

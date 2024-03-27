@@ -1,12 +1,12 @@
 [gd_scene load_steps=4 format=3 uid="uid://du15pc8r8iswm"]
 
-[ext_resource type="Script" path="res://src/scripts/chapter_menu.gd" id="1_5ihc6"]
-[ext_resource type="Texture2D" uid="uid://c4io7vrgdmces" path="res://assets/art/shared/menus/chapter_menu.png" id="2_li4je"]
-[ext_resource type="FontFile" uid="uid://bfnot86sditsf" path="res://assets/theme/fonts/dpcomic.ttf" id="3_a60n2"]
+[ext_resource type="Script" path="res://src/scripts/chapter_menu.gd" id="1_hcsp8"]
+[ext_resource type="Texture2D" uid="uid://c4io7vrgdmces" path="res://assets/art/shared/menus/chapter_menu.png" id="2_w2syj"]
+[ext_resource type="FontFile" uid="uid://bfnot86sditsf" path="res://assets/theme/fonts/dpcomic.ttf" id="3_xf5qy"]
 
 [node name="ChapterMenu" type="Node2D"]
 scale = Vector2(4, 4)
-script = ExtResource("1_5ihc6")
+script = ExtResource("1_hcsp8")
 
 [node name="Ui" type="Control" parent="."]
 layout_mode = 3
@@ -27,7 +27,7 @@ offset_right = 144.0
 offset_bottom = 81.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_li4je")
+texture = ExtResource("2_w2syj")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Ui"]
 layout_mode = 1
@@ -42,7 +42,7 @@ offset_right = 86.0
 offset_bottom = 66.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/normal_font = ExtResource("3_a60n2")
+theme_override_fonts/normal_font = ExtResource("3_xf5qy")
 theme_override_font_sizes/normal_font_size = 30
 text = "Select Chapter"
 
@@ -56,7 +56,7 @@ offset_top = -49.0
 offset_right = 72.0
 offset_bottom = -1.0
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("3_a60n2")
+theme_override_fonts/font = ExtResource("3_xf5qy")
 theme_override_font_sizes/font_size = 13
 text = "Crete"
 
@@ -70,7 +70,7 @@ offset_top = -49.0
 offset_right = 136.0
 offset_bottom = -1.0
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("3_a60n2")
+theme_override_fonts/font = ExtResource("3_xf5qy")
 theme_override_font_sizes/font_size = 13
 text = "Bavaria"
 
@@ -84,7 +84,7 @@ offset_top = -49.0
 offset_right = 200.0
 offset_bottom = -1.0
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("3_a60n2")
+theme_override_fonts/font = ExtResource("3_xf5qy")
 theme_override_font_sizes/font_size = 13
 text = "Babylon"
 
@@ -98,7 +98,7 @@ offset_top = -49.0
 offset_right = 264.0
 offset_bottom = -1.0
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("3_a60n2")
+theme_override_fonts/font = ExtResource("3_xf5qy")
 theme_override_font_sizes/font_size = 13
 text = "Sand
 box"
