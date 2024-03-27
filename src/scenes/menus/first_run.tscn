@@ -1,0 +1,56 @@
+[gd_scene load_steps=4 format=3 uid="uid://c3e7flwaud3vg"]
+
+[ext_resource type="Script" path="res://src/scripts/first_run.gd" id="1_6wx5l"]
+[ext_resource type="Texture2D" uid="uid://bi7mgudeo1dj1" path="res://assets/art/shared/menus/main_menu.png" id="2_pij7v"]
+[ext_resource type="FontFile" uid="uid://bfnot86sditsf" path="res://assets/theme/fonts/dpcomic.ttf" id="3_105wu"]
+
+[node name="FirstRun" type="Node2D"]
+scale = Vector2(4, 4)
+script = ExtResource("1_6wx5l")
+
+[node name="Ui" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 288.0
+offset_bottom = 162.0
+
+[node name="TextureRect" type="TextureRect" parent="Ui"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = -81.0
+offset_right = 144.0
+offset_bottom = 81.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_pij7v")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Ui"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = -47.0
+offset_right = 144.0
+offset_bottom = 65.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("3_105wu")
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "
+[center][tornado radius=10.0 freq=5.0 connected=1]Loading[/tornado][/center]"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

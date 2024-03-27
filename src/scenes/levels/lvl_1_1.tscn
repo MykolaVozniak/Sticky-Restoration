@@ -2,12 +2,12 @@
 
 [ext_resource type="Texture2D" uid="uid://dapnmukp11olr" path="res://assets/art/crete/environment/tablecloth.png" id="1_70y6a"]
 [ext_resource type="Texture2D" uid="uid://ctlxknl4fihy5" path="res://assets/art/crete/environment/background.png" id="2_88vks"]
-[ext_resource type="Script" path="res://src/scripts/Figure.gd" id="3_nnh6d"]
+[ext_resource type="Script" path="res://src/scripts/figure.gd" id="3_tco4m"]
 [ext_resource type="Texture2D" uid="uid://byt6lmb6n070h" path="res://assets/art/shared/tile_maps/figure_tiles.png" id="4_2xr6l"]
 [ext_resource type="Texture2D" uid="uid://bibhwi0887lut" path="res://assets/art/shared/tile_maps/shadow_tiles.png" id="5_r56di"]
 [ext_resource type="Texture2D" uid="uid://bhad17uaqynyt" path="res://assets/art/shared/tile_maps/example_tiles.png" id="6_g4qgj"]
+[ext_resource type="Script" path="res://src/scripts/game_manager.gd" id="7_3hoey"]
 [ext_resource type="Texture2D" uid="uid://cxqmbist5vlyb" path="res://assets/art/shared/tile_maps/glyph_tiles.png" id="7_erxqb"]
-[ext_resource type="Script" path="res://src/scripts/GameManager.gd" id="8_2tp0x"]
 [ext_resource type="FontFile" uid="uid://bfnot86sditsf" path="res://assets/theme/fonts/dpcomic.ttf" id="9_vbgtg"]
 [ext_resource type="Texture2D" uid="uid://c5fgikms6shah" path="res://assets/art/crete/environment/buttons/pause_button_normal.png" id="11_ernj7"]
 [ext_resource type="Texture2D" uid="uid://dljg2p2pibb8y" path="res://assets/art/crete/environment/buttons/pause_button_pressed.png" id="12_lg7g0"]
@@ -807,7 +807,7 @@ texture = ExtResource("2_88vks")
 metadata/_edit_lock_ = true
 
 [node name="Figure" type="CharacterBody2D" parent="."]
-script = ExtResource("3_nnh6d")
+script = ExtResource("3_tco4m")
 
 [node name="FigureMap" type="TileMap" parent="Figure"]
 tile_set = SubResource("TileSet_4spe5")
@@ -840,7 +840,7 @@ wait_time = 20.0
 
 [node name="GameManager" type="Node2D" parent="."]
 unique_name_in_owner = true
-script = ExtResource("8_2tp0x")
+script = ExtResource("7_3hoey")
 lvl_menu = "res://src/scenes/menus/crete_menu.tscn"
 current_lvl = "res://src/scenes/levels/lvl_1_1.tscn"
 next_lvl = "res://src/scenes/levels/lvl_1_1.tscn"

@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://b7rhndggondnc"]
 
-[ext_resource type="Script" path="res://src/scenes/screens/loose_screen.gd" id="1_oduew"]
+[ext_resource type="Script" path="res://src/scripts/loose_screen.gd" id="1_oduew"]
 [ext_resource type="Texture2D" uid="uid://d0xixvit1fshw" path="res://assets/art/crete/environment/pause_screen.png" id="2_0be4d"]
 [ext_resource type="Texture2D" uid="uid://b8so8e3b5gkof" path="res://assets/art/crete/environment/A_de_a_nema.png" id="2_7qthi"]
 [ext_resource type="FontFile" uid="uid://bfnot86sditsf" path="res://assets/theme/fonts/dpcomic.ttf" id="3_cfqks"]

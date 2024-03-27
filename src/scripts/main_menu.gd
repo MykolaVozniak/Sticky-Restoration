@@ -1,11 +1,10 @@
 extends Node2D
+
 const CHAPTER_MENU = preload("res://src/scenes/menus/chapter_menu.tscn")
 const JOURNAL_SCREEN = preload("res://src/scenes/screens/journal_screen.tscn")
 const SETTINGS_SCREEN = preload("res://src/scenes/screens/settings_screen.tscn")
-func _ready():
-	pass
 
-func _process(delta):
+func _ready():
 	pass
 
 func _on_quit_button_pressed():
