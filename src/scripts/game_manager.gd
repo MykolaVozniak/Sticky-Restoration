@@ -3,15 +3,10 @@ extends Node2D
 @onready var text_message = $TextMessage
 @onready var sl_animation_player = $ShadeLayer/SLAnimationPlayer
 @onready var tm_animation_player = $TextMessage/TMAnimationPlayer
-@onready var pb_animation_player = $PauseButton/PBAnimationPlayer
+@onready var pb_animation_player = $"../PauseButton/PBAnimationPlayer"
 
 const PAUSE_SCREEN = preload("res://src/scenes/screens/pause_screen.tscn")
 var pause_screen
-
-@export_category("Navigation Paths")
-@export var lvl_menu: String
-@export var current_lvl: String
-@export var next_lvl: String
 
 const TILE_SIZE: int = 8
 

@@ -841,9 +841,6 @@ wait_time = 20.0
 [node name="GameManager" type="Node2D" parent="."]
 unique_name_in_owner = true
 script = ExtResource("7_3hoey")
-lvl_menu = "res://src/scenes/menus/crete_menu.tscn"
-current_lvl = "res://src/scenes/levels/lvl_1_1.tscn"
-next_lvl = "res://src/scenes/levels/lvl_1_1.tscn"
 
 [node name="ShadeLayer" type="ColorRect" parent="GameManager"]
 offset_right = 288.0
@@ -882,7 +879,7 @@ libraries = {
 "": SubResource("AnimationLibrary_tbfg4")
 }
 
-[node name="PauseButton" type="TextureButton" parent="GameManager"]
+[node name="PauseButton" type="TextureButton" parent="."]
 offset_left = 265.0
 offset_top = 3.0
 offset_right = 284.0
@@ -892,9 +889,9 @@ texture_pressed = ExtResource("12_lg7g0")
 texture_hover = ExtResource("13_t4tsi")
 metadata/_edit_lock_ = true
 
-[node name="PBAnimationPlayer" type="AnimationPlayer" parent="GameManager/PauseButton"]
+[node name="PBAnimationPlayer" type="AnimationPlayer" parent="PauseButton"]
 libraries = {
 "": SubResource("AnimationLibrary_0syif")
 }
 
-[connection signal="pressed" from="GameManager/PauseButton" to="GameManager" method="_on_pause_button_pressed"]
+[connection signal="pressed" from="PauseButton" to="GameManager" method="_on_pause_button_pressed"]

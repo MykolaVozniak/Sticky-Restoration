@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://d4c5aieoyyyga"]
+[gd_scene load_steps=2 format=3 uid="uid://d4c5aieoyyyga"]
+
+[ext_resource type="Script" path="res://src/scenes/screens/journal_screen.gd" id="1_3jamx"]
 
 [node name="Journal" type="Control"]
 layout_mode = 3
@@ -7,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_3jamx")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
@@ -15,3 +18,13 @@ offset_top = 91.0
 offset_right = 124.0
 offset_bottom = 162.0
 color = Color(0.898039, 0.886275, 0, 1)
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 104.0
+offset_right = 120.0
+offset_bottom = 144.0
+text = "<-"
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
